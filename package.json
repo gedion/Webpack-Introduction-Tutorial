@@ -6,16 +6,36 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "del-cli dist -f",
     "build": "webpack src/main.js dist/bundle.js",
-    "execute": "node dist/bundle.js",
+    "execute" : "node dist/bundle.js",
+    "server": "http-server ./dist",
     "start": "npm run build -s && npm run execute -s"
   },
   "author": "Joseph Zimmerman <contact@joezimjs.com>",
   "license": "MIT",
   "dependencies": {
-    "lodash": "~4.17.4"
+    "loadash": "0.0.1",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "del-cli": "~0.2.1",
-    "webpack": "~2.2.1"
-  }
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "del-cli": "^0.2.0",
+    "handlebars": "^4.0.5",
+    "handlebars-loader": "^1.3.0",
+    "html-webpack-plugin": "^2.21.0",
+    "http-server": "^0.9.0",
+    "webpack": "^1.13.1"
+  },
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gedion/Webpack-Introduction-Tutorial"
+  },
+  "bugs": {
+    "url": "https://github.com/gedion/Webpack-Introduction-Tutorial/issues"
+  },
+  "homepage": "https://github.com/gedion/Webpack-Introduction-Tutorial"
 }
